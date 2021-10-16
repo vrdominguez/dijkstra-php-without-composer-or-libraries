@@ -84,3 +84,60 @@ Find all the shortest paths from a specific node (example: `Madrid`):
 | Segovia     | 15 | Madrid => Teruel => Zaragoza => Lleida => Segovia   |
 | Ciudad Real | 17 | Madrid => Teruel => Alicante => Ciudad Real         |
 
+## Run with docker
+
+In order to run the example script with docker it can be done with the command
+
+```bash
+docker run --rm -ti -v $(pwd):/dijkstra/ php:8 /usr/local/bin/php /dijkstra/run.php
+```
+
+Expected output:
+
+```
+GET ONE PATH:
+
+Path from Logroño to Ciudad Real:
+  - Cost: 16
+  - Path: Logroño => Zaragoza => Lleida => Castellón => Ciudad Real
+
+
+GET ALL PATHS
+
+Path from Madrid to Madrid:
+  - Cost: 0
+  - Path: 
+
+Path from Madrid to Logroño:
+  - Cost: 8
+  - Path: Madrid => Logroño
+
+Path from Madrid to Teruel:
+  - Cost: 3
+  - Path: Madrid => Teruel
+
+Path from Madrid to Zaragoza:
+  - Cost: 5
+  - Path: Madrid => Teruel => Zaragoza
+
+Path from Madrid to Lleida:
+  - Cost: 7
+  - Path: Madrid => Teruel => Zaragoza => Lleida
+
+Path from Madrid to Alicante:
+  - Cost: 10
+  - Path: Madrid => Teruel => Alicante
+
+Path from Madrid to Castellón:
+  - Cost: 11
+  - Path: Madrid => Teruel => Zaragoza => Lleida => Castellón
+
+Path from Madrid to Segovia:
+  - Cost: 15
+  - Path: Madrid => Teruel => Zaragoza => Lleida => Segovia
+
+Path from Madrid to Ciudad Real:
+  - Cost: 17
+  - Path: Madrid => Teruel => Alicante => Ciudad Real
+
+```
