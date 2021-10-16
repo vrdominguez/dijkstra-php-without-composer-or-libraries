@@ -36,7 +36,7 @@ $connections = [
 // Create the Graph object with current data
 $graph = Graph::graphFromArray($cities, $connections);
 
-// Get path from Logoroño to Madrid
+// Get path from Logoroño to Ciudad Real
 print PHP_EOL . 'GET ONE PATH:' . PHP_EOL . PHP_EOL;
 $path = $graph->getShortestPath('Logroño', 'Ciudad Real');
 showPaths('Logroño', $path);
