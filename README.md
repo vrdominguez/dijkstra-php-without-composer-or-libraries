@@ -1,4 +1,4 @@
-# Dijkstra's Algorithm for shortest path withoit composer or any external library
+# Dijkstra's Algorithm for shortest path without composer or any external library
 
 Implementation of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in order to find the
 shortest path between two nodes of a graph.
